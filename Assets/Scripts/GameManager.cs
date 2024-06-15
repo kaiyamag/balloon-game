@@ -4,6 +4,9 @@ using UnityEngine;
 using System;
 
 /*
+GameManager.cs
+Kaiya Magnuson, 06/2024
+
 Manages high-level game events including game over and scroll speed
 */
 public class GameManager : MonoBehaviour
@@ -13,10 +16,11 @@ public class GameManager : MonoBehaviour
     public static event Action<int> OnScoreChange;  
 
     // ~~~~ MENUS ~~~~
-    public GameObject gameOverMenu;     // UI element to show on game over
+    public GameObject gameOverMenu;             // UI element to show on game over
 
     // ~~~~ PROPERTIES ~~~~
-    public float scrollSpeed;   // Movement speed of obstacles
+    public float scrollSpeed;                   // Movement speed of obstacles
+    // public GameObject scoreDisplay;
 
     void Start()
     {
@@ -24,10 +28,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
 
         // Initialize UI menus
-        gameOverMenu.SetActive(false);
+        gameOverMenu.SetActive(false); 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -47,7 +50,9 @@ public class GameManager : MonoBehaviour
         OnScoreChange += DisplayScore.HandleOnScoreChange;
     }
 
-    // Handles game over case
+    /*
+    Handles game over case
+    */
     private void HandleGameOver() 
     {
         Debug.Log("Game Over!!");
@@ -55,12 +60,16 @@ public class GameManager : MonoBehaviour
         gameOverMenu.SetActive(true);   // Show restart menu
     }
 
-    // Triggers the OnGameOver event. Can be called by other classes
+    /*
+    Triggers the OnGameOver event. Can be called by other classes
+    */
     public static void TriggerOnGameOver() {
         OnGameOver?.Invoke();
     }
 
-    // Triggers the OnScoreChange event. Can be called by other classes
+    /*
+    Triggers the OnScoreChange event. Can be called by other classes
+    */
     public static void TriggerOnScoreChange(int scoreInc) {
         OnScoreChange?.Invoke(scoreInc);
     }

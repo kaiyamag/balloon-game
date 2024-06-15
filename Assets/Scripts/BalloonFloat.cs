@@ -2,21 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+BalloonFloat.cs
+Kaiya Magnuson, 06/2024
+
+Handles player input to control balloon motion
+*/
 public class BalloonFloat : MonoBehaviour
 {
-    public float risingSpeed = 5;
-    public float fallingSpeed = 2;
-    public float horizSpeed = 2;
-    private float xBound = -16;
-    private float yBound = -7;
-    private float xStart = -8;
-    // Start is called before the first frame update
+    public float risingSpeed = 5;   // Speed at which the balloon moves when controlled by player vertical input
+    public float fallingSpeed = 2;  // Speed of balloon descent due to gravity
+    public float horizSpeed = 2;    // Speed at which balloon returns to default x-posititon
+    private float xBound = -16;     // Left-hand screen barrier
+    private float yBound = -7;      // Lower screen barrier
+    private float xStart = -8;      // Default balloon x-position
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Float up when up key pressed

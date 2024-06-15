@@ -31,6 +31,9 @@ public class DisplayScore : MonoBehaviour
 
     }
 
+    /*
+    Increments current score by `scoreInc` and displays the result
+    */
     public static void HandleOnScoreChange(int scoreInc)
     {
         score += scoreInc;
