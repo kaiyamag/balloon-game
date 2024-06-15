@@ -32,7 +32,7 @@ public class BalloonFloat : MonoBehaviour
 
         // Check for out-of-bounds conditions
         if (transform.position.x < xBound || transform.position.y < yBound) {
-            Debug.Log("Game Over");
+            GameManager.TriggerOnGameOver();
         }
     }
 }
