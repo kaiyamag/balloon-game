@@ -10,40 +10,58 @@ public class GameManager : MonoBehaviour
 {
     // ~~~~ ACTIONS ~~~~
     public static event Action OnGameOver;      // Game event triggered when game is over
-    public float scrollSpeed;
-    // Start is called before the first frame update
+    public static event Action<int> OnScoreChange;  
+
+    // ~~~~ MENUS ~~~~
+    public GameObject gameOverMenu;     // UI element to show on game over
+
+    // ~~~~ PROPERTIES ~~~~
+    public float scrollSpeed;   // Movement speed of obstacles
+
     void Start()
     {
+        // Initialize properties
+        Time.timeScale = 1;
 
+        // Initialize UI menus
+        gameOverMenu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnEnable() 
     {
-        // Subscribe relevant internal functions to game events
-        OnGameOver += GameOver;
+        // Subscribe relevant internal & external functions to game events
+        OnGameOver += HandleGameOver;
+        OnScoreChange += DisplayScore.HandleOnScoreChange;
     }
 
     void OnDisable() 
     {
-        // Unsubscribe relevant internal functions to game events
-        OnGameOver -= GameOver;
+        // Unsubscribe relevant internal & external functions to game events
+        OnGameOver -= HandleGameOver;
+        OnScoreChange += DisplayScore.HandleOnScoreChange;
     }
 
-    // Test method
-    private void GameOver() 
+    // Handles game over case
+    private void HandleGameOver() 
     {
         Debug.Log("Game Over!!");
-        Time.timeScale = 0;     // Freeze gameplay
+        Time.timeScale = 0;             // Freeze gameplay
+        gameOverMenu.SetActive(true);   // Show restart menu
     }
 
     // Triggers the OnGameOver event. Can be called by other classes
     public static void TriggerOnGameOver() {
         OnGameOver?.Invoke();
+    }
+
+    // Triggers the OnScoreChange event. Can be called by other classes
+    public static void TriggerOnScoreChange(int scoreInc) {
+        OnScoreChange?.Invoke(scoreInc);
     }
 }

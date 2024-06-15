@@ -25,7 +25,7 @@ public class SideScroll : MonoBehaviour
     void Update()
     {
         // Get current speed
-        //speed = gameManager.GetComponent<GameManager>().scrollSpeed;
+        speed = gameManager.GetComponent<GameManager>().scrollSpeed;
         // Move object
         transform.Translate(-1 * transform.right * Time.deltaTime * speed);
 
