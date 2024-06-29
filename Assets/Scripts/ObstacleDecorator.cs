@@ -27,8 +27,9 @@ public class ObstacleDecorator : BaseObstacle
         } else {
             // Spawn the existing block
             baseObstacle.Spawn();
-            // Placeholder for decorator behavior
-            Debug.Log("You got decorated ! :D");
+            
+            // Decorate existing block by instantiating this coin pattern
+            Instantiate(gameObject, transform.position, Quaternion.identity);
         }
     }
 }

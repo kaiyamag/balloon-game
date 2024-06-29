@@ -18,8 +18,7 @@ public class BlockDriver : MonoBehaviour
         }
 
         // Decorate the obstacle with a coin pattern
-        GameObject decoratorObject = Instantiate(decoratorPrefab, transform.position, Quaternion.identity);
-        ObstacleDecorator decoratedObstacle = decoratorObject.GetComponent<ObstacleDecorator>();
+        ObstacleDecorator decoratedObstacle = decoratorPrefab.GetComponent<ObstacleDecorator>();
 
         if (decoratedObstacle == null) {
             Debug.LogError("decoratedObstacle is null");
