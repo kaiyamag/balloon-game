@@ -65,11 +65,11 @@ public class BlockCreator : MonoBehaviour
         int result = -1;    // TODO: Maybe change this to a usable index just in case
         int x = Random.Range(0, 100);     // Random is exclusive on the last bound
         float lowerBound = 0;
-        Debug.Log("-- Starting random. x = " + x);
+        //Debug.Log("-- Starting random. x = " + x);
         for (int i = 0; i < weights.Length; i++) {
-            Debug.Log("-- Comparing obstacleWeights[" + i + "] = " + obstacleWeights[i] + ", lowerBound = " + lowerBound);
+            //Debug.Log("-- Comparing obstacleWeights[" + i + "] = " + obstacleWeights[i] + ", lowerBound = " + lowerBound);
             if (x < weights[i] + lowerBound) {
-                Debug.Log("--result = " + i);
+                //Debug.Log("--result = " + i);
                 //testTally[result] = testTally[result] + 1;
                 //PrintArray(testTally);
                 result = i;

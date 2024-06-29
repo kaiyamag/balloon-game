@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468463928}
   - component: {fileID: 468463927}
+  - component: {fileID: 468463929}
   m_Layer: 0
   m_Name: BlockCreator
   m_TagString: Untagged
@@ -285,7 +286,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7b86aeb488ecc4ea882641f988f5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockPrefab: {fileID: 4432616241118252062, guid: fb0bd2488b585d4489593836a94c1b5f, type: 3}
+  obstaclePrefabs:
+  - {fileID: 4432616241118252062, guid: fb0bd2488b585d4489593836a94c1b5f, type: 3}
+  - {fileID: 5875064518243735026, guid: 210c3581b560c434d825101d1f22cebc, type: 3}
+  decoratorPrefabs:
+  - {fileID: 743691033785125939, guid: 267e563faad5f504fb6f01ca20b94bd0, type: 3}
+  obstacleWeights:
+  - 50
+  - 50
 --- !u!4 &468463928
 Transform:
   m_ObjectHideFlags: 0
@@ -301,6 +309,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &468463929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468463926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdfefc43d04c8e6419a0a8cfbaef7a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,63 +1225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16aad5ad915aa24aa53a8e57900f851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1859931951
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 335941309172766602, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9153361953462644402, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
-      propertyPath: m_Name
-      value: Coin
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c6bf808f99298994e98b36329e45bcf8, type: 3}
 --- !u!1 &1863729918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,5 +1454,4 @@ SceneRoots:
   - {fileID: 1903506674}
   - {fileID: 2125069007}
   - {fileID: 719630504}
-  - {fileID: 1859931951}
   - {fileID: 468463928}

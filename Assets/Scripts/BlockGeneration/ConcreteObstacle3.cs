@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-Defines the behavior of a basic obstacle.
-TODO: Obstacles with more complex behaviors should be sibling classes to this one
+Defines the behavior of a basic Obstacle3 (center obstacle).
 */
-public class ConcreteObstacle : BaseObstacle
+public class ConcreteObstacle3 : BaseObstacle
 {
     /* Array of prefabs for all coin patterns that are compatible with this obstacle type
     */
     public GameObject[] validCoinPatternPrefabs;
+
+    private float spawnX = 20;      // X position of right-hand obstacle spawn
 
     /*
     Instantiates this gameObject
     */
     public override void Spawn()
     {
-        Instantiate(gameObject, transform.position, Quaternion.identity);
+        // Set centered height
+        float yPos = 0;
+        Vector3 spawnPos = new Vector3(spawnX, yPos, 0);
+
+        Instantiate(gameObject, spawnPos, Quaternion.identity);
     }
 
     /*

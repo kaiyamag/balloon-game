@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 987383729709457476}
   - component: {fileID: 46131948492418568}
   - component: {fileID: 5777198944094316181}
-  - component: {fileID: 3790494705452121583}
+  - component: {fileID: -3312131595903906362}
   m_Layer: 0
   m_Name: Obstacle3BlockBase
   m_TagString: Untagged
@@ -161,7 +161,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
---- !u!114 &3790494705452121583
+--- !u!114 &-3312131595903906362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5875064518243735026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3a807341951122408b31eb6dc1ee045, type: 3}
+  m_Script: {fileID: 11500000, guid: 69e44005d780b164a97067c0f790f6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   validCoinPatternPrefabs:
