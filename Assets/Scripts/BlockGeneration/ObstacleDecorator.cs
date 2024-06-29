@@ -32,4 +32,9 @@ public class ObstacleDecorator : BaseObstacle
             Instantiate(gameObject, transform.position, Quaternion.identity);
         }
     }
+
+    /*
+    PLACEHOLDER: temporary fix
+    */
+    public override GameObject GetRandomCoinPattern() {return gameObject;}
 }

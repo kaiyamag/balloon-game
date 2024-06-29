@@ -279,4 +279,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3a807341951122408b31eb6dc1ee045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 0}
+  validCoinPatternPrefabs:
+  - {fileID: 743691033785125939, guid: 267e563faad5f504fb6f01ca20b94bd0, type: 3}
