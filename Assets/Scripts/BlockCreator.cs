@@ -2,34 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Another script that calls ConstructBlock from BlockDriver
+/*
+Manages the spawn cycle of random blocks (Randomizes block components and controls spawn loop)
+*/
 public class BlockCreator : MonoBehaviour
 {
-    public GameObject blockPrefab; // Assign this prefab in the inspector
-    public GameObject decoratorPrefab; // Assign this prefab in the inspector
+     /* Reference to the obstacle(s) that can form the base of a block. Obstacles
+     must have the ConcreteObstacle.cs script.
+    */
+    public GameObject obstaclePrefab; 
+
+    /* Reference to the coin patterns(s) that can decorate a block. Coin Pptterns
+     must have the ObstacleDecorator.cs script.
+    */ 
+    public GameObject decoratorPrefab; 
+
+    /* Stores a reference to this object's BlockDriver.cs script
+    */
     private BlockDriver blockDriver;
-    private float startDelay = 0;
-    private float spawnInterval = 2;
+    private float startDelay = 0;       // Time in seconds before starting spawn loop
+    private float spawnInterval = 2;    // Time in seconds between each block spawn
 
     void Start()
     {
-        // Find the BlockDriver component on the GameObject
-        // BlockDriver blockDriver = FindObjectOfType<BlockDriver>();
         blockDriver = GetComponent<BlockDriver>();
-        
         StartInvoke();
     }
-
+    /* Spawns a block with a set obstacle and coin pattern
+    */
     void SpawnBlock()
     {
-        // Call ConstructBlock and pass the prefab you want to instantiate
-        BaseObstacle newBlock = blockDriver.ConstructBlock(blockPrefab, decoratorPrefab);
-
-        // Now you have a new block with the base obstacle and decorations
-        //ADDED
+        // Get a constructed block from the given obstacle and coin pattern prefabs
+        BaseObstacle newBlock = blockDriver.ConstructBlock(obstaclePrefab, decoratorPrefab);
         newBlock.Spawn();
     }
 
+    /* Calls the SpawnBlock() method on repeat
+    */
     void StartInvoke() {
         InvokeRepeating("SpawnBlock", startDelay, spawnInterval);
 

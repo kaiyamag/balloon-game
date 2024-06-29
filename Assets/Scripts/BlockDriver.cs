@@ -2,30 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// The driver class that constructs and decorates blocks
+/* Manages the construction of a block consisting of a base obstacle and a decorating coin pattern
+*/
 public class BlockDriver : MonoBehaviour
 {
-    // void Start()
-    // {
-    //     BaseObstacle b = ConstructBlock
-    // }
+    /* Returns a BaseObstacle constructed from an obstacle prefab (must implement BaseObstacle)
+    and a coin pattern prefab (must implement ObstacleDecorator)
+    */
     public BaseObstacle ConstructBlock(GameObject obstaclePrefab, GameObject decoratorPrefab)
     {
-        Debug.Log("Constructing block");
-        // Instantiate the base obstacle
-        // prefab must be of type that contains the BaseObstacle script
-        //GameObject obstacleObject = Instantiate(obstaclePrefab, transform.position, Quaternion.identity);
+        // Get a reference to class of parent type BaseObstacle
         BaseObstacle baseObstacle = obstaclePrefab.GetComponent<BaseObstacle>();
         if (baseObstacle == null) {
             Debug.LogError("baseObstacle is null **");
         }
 
-        // Decorate the obstacle as needed
-        // For example, adding a visual effect or modifying properties
-        //ObstacleDecorator decoratedObstacle = new ObstacleDecorator(baseObstacle);      // CHANGED from `SomeConcreteDecorator`
-        //ObstacleDecorator decoratedObstacle = gameObject.AddComponent<ObstacleDecorator>();
+        // Decorate the obstacle with a coin pattern
         GameObject decoratorObject = Instantiate(decoratorPrefab, transform.position, Quaternion.identity);
         ObstacleDecorator decoratedObstacle = decoratorObject.GetComponent<ObstacleDecorator>();
+
         if (decoratedObstacle == null) {
             Debug.LogError("decoratedObstacle is null");
         } else {

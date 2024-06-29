@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Decorator class that adds additional functionality to obstacles
-public /*abstract*/ class ObstacleDecorator : BaseObstacle
+/* Basic concrete decorator class. Decorates a BaseObstacle with a coin pattern
+TODO: Should add an abstact decorator parent class that defines the behavior of all child decorators
+*/
+public class ObstacleDecorator : BaseObstacle
 {
+    /* A block consisting of one obstacle base and any number of coin pattern decorators
+    */
     protected BaseObstacle baseObstacle;
 
-    public void /*ObstacleDecorator*/Init(BaseObstacle obstacle)
+    /*
+    Replacement constructor for MonoBehaviours. Must be called upon Instantiating
+    an ObstacleDecorator. Initializes the base obstacle.
+    */
+    public void Init(BaseObstacle obstacle)
     {
         this.baseObstacle = obstacle;
     }
@@ -17,9 +25,10 @@ public /*abstract*/ class ObstacleDecorator : BaseObstacle
         if (baseObstacle == null) {
             Debug.Log("baseObstacle is null");
         } else {
-            baseObstacle.Spawn(); // Call the wrapped obstacle's Spawn method
+            // Spawn the existing block
+            baseObstacle.Spawn();
+            // Placeholder for decorator behavior
             Debug.Log("You got decorated ! :D");
-            // Add decoration behavior here
         }
     }
 }

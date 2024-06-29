@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// A concrete obstacle class
+/*
+Defines the behavior of a basic obstacle.
+TODO: Obstacles with more complex behaviors should be sibling classes to this one
+*/
 public class ConcreteObstacle : BaseObstacle
 {
-    //public GameObject obstaclePrefab; // Assign the prefab in the inspector
-
+    /*
+    Instantiates this gameObject
+    */
     public override void Spawn()
     {
         Instantiate(/*obstaclePrefab*/ gameObject, transform.position, Quaternion.identity);
