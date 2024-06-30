@@ -51,7 +51,7 @@ public class StandardObstacle : BaseObstacle
     /*
     Returns a random coin pattern decorator that is compatible with this base obstacle
     */
-    public override GameObject GetRandomCoinPattern()
+    public GameObject GetRandomCoinPattern()
     {
         int coinIndex = Utils.GetRandWeightedIndex(coinPatternWeights);
         Debug.Log("Selecting coin pattern index " + coinIndex);

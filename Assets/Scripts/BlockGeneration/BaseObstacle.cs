@@ -14,17 +14,6 @@ public abstract class BaseObstacle : MonoBehaviour
     public abstract void Spawn();
 
     /*
-    Returns a random coin pattern decorator that is compatible with this base obstacle
-    TODO: move to StandardObstacle only?
-    */
-    public abstract GameObject GetRandomCoinPattern();
-
-    /*
-    Returns the ID of the base obstacle type.
-    */
-    //public abstract int GetObstacleID();
-
-    /*
     Returns a list of obstacle info
     */
     public abstract ObstacleInfo GetObstacleInfo();

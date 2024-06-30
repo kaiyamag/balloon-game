@@ -91,11 +91,11 @@ public abstract class ObstacleDecorator : BaseObstacle
     PLACEHOLDER: This method should not be called from a decorator class, but is
     necessary to conform to BaseObstacle. Returns this gameObject
     */
-    public override GameObject GetRandomCoinPattern() 
-    {
-        Debug.LogError("Inappropriate call of GetRandomCoinPattern from " + gameObject.name);
-        return gameObject;
-    }
+    // public override GameObject GetRandomCoinPattern() 
+    // {
+    //     Debug.LogError("Inappropriate call of GetRandomCoinPattern from " + gameObject.name);
+    //     return gameObject;
+    // }
 
      /*
     PLACEHOLDER: This method should not be called from a decorator class, but is

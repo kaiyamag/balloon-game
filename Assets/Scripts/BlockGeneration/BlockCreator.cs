@@ -36,10 +36,9 @@ public class BlockCreator : MonoBehaviour
         
         int obstacleIndex = Utils.GetRandWeightedIndex(obstacleWeights);  // PLACEHOLDER
         GameObject randObstacle = obstaclePrefabs[obstacleIndex];
-        GameObject randCoinPattern = randObstacle.GetComponent<BaseObstacle>().GetRandomCoinPattern();
 
         // Get a constructed block from the given obstacle and coin pattern prefabs
-        BaseObstacle newBlock = blockDriver.ConstructBlock(obstaclePrefabs[obstacleIndex]/*, decoratorPrefabs[decoratorIndex]*/);
+        BaseObstacle newBlock = blockDriver.ConstructBlock(obstaclePrefabs[obstacleIndex]);
         newBlock.Spawn();
     }
 

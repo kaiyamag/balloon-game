@@ -12,7 +12,7 @@ public class BlockDriver : MonoBehaviour
     public BaseObstacle ConstructBlock(GameObject obstaclePrefab)
     {
         // Get a reference to class of parent type BaseObstacle
-        BaseObstacle baseObstacle = obstaclePrefab.GetComponent<BaseObstacle>();
+        StandardObstacle baseObstacle = obstaclePrefab.GetComponent<StandardObstacle>();
         if (baseObstacle == null) {
             Debug.LogError("baseObstacle is null **");
         }
