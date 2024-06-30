@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
+ObstacleDecorator.cs
+Kaiya Magnuson 2024
+
 Abstract parent class for all block decorators (coin patterns). Contains properties
 and methods shared by all coin patterns, and the abstract method SpawnPatternFromPos(Vector3)
 that all child classes must implement

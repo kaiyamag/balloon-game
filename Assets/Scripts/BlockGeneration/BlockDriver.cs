@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* Manages the construction of a block consisting of a base obstacle and a decorating coin pattern
+/* 
+BlockDriver.cs
+Kaiya Magnuson 2024
+
+Manages the construction of a block consisting of a base obstacle and a decorating coin pattern
 */
 public class BlockDriver : MonoBehaviour
 {

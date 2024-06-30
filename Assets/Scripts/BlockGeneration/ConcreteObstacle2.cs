@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
+ConcreteObstacle2.cs
+Kaiya Magnuson 2024
+
 Defines the behavior of a basic Obstacle2 (split obstacle). Inherits from StandardObstacle
 */
 public class ConcreteObstacle2 : StandardObstacle

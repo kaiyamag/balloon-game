@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
+ConcreteObstacle3.cs
+Kaiya Magnuson 2024
+
 Defines the behavior of a basic Obstacle3 (center obstacle). Inherits from StandardObstacle
 */
 public class ConcreteObstacle3 : StandardObstacle
@@ -14,7 +17,7 @@ public class ConcreteObstacle3 : StandardObstacle
     {
         obstacleID = 3;
         offset = 4.5f;      // Offset to center Split Obstacle
-        spawnX = 20;      // X position of right-hand obstacle spawn
+        spawnX = 20;        // X position of right-hand obstacle spawn
         spawnY = 0;
     }
 

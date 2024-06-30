@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
+ObstacleInfo.cs
+Kaiya Magnuson 2024
+
 Container class for obstacle properties including ID, vertical offset, and spawn X-Y positions
 */
 [System.Serializable]

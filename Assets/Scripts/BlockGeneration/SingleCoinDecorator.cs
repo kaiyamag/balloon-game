@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* Basic concrete decorator class. Decorates a BaseBlock with a single coin pattern
+/* 
+SingleCoinDecorator.cs
+Kaiya Magnuson 2024
+
+Basic concrete decorator class. Decorates a BaseBlock with a single coin pattern
 */
 public class SingleCoinDecorator : ObstacleDecorator
 {
@@ -11,6 +15,7 @@ public class SingleCoinDecorator : ObstacleDecorator
     */
     public override void SpawnPatternFromPos(Vector3 pos) 
     {
+        Debug.Log(""Spawn single coin starting at " + pos");
         Instantiate(gameObject, pos, Quaternion.identity);
     }
 }

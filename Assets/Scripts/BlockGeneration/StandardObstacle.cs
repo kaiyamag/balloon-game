@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
+StandardObstacle.cs
+Kaiya Magnuson 2024
+
 Defines standard properties and behaviour of base obstacles.
 */
 public class StandardObstacle : BaseBlock

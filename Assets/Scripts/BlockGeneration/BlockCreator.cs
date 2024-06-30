@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
+BlockCreator.cs
+Kaiya Magnuson 2024
+
 Manages the spawn cycle of random blocks (Randomizes block components and controls spawn loop)
 */
 public class BlockCreator : MonoBehaviour
@@ -29,6 +32,7 @@ public class BlockCreator : MonoBehaviour
         blockDriver = GetComponent<BlockDriver>();
         StartInvoke();
     }
+
     /* Spawns a block with a set obstacle and coin pattern
     */
     void SpawnBlock()

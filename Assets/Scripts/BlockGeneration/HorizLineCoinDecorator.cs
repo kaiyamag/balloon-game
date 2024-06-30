@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* Basic concrete decorator class. Decorates a BaseBlock with a single coin pattern
+/* 
+HorizLineCoinDecorator.cs
+Kaiya Magnuson 2024
+
+Basic concrete decorator class. Decorates a BaseBlock with a single coin pattern
 */
 public class HorizLineCoinDecorator : ObstacleDecorator
 {
