@@ -55,6 +55,14 @@ public abstract class ObstacleDecorator : BaseBlock
 
         // Set single coin spawn position based on base obstacle type and retrieved obstacle info
         switch(obsID) {
+            // Empty Obstacle
+            case 0:
+                offset = obsInfo.offset;
+                spawnX = obsInfo.spawnX;
+                spawnY = obsInfo.spawnY;
+                spawnPos = new Vector3(spawnX, spawnY, 0);
+                break;
+                
             // Split Obstacle
             case 2:
                 offset = obsInfo.offset;
@@ -78,6 +86,7 @@ public abstract class ObstacleDecorator : BaseBlock
                 break;
 
             default:
+                Debug.LogError("Unexpected obstacle ID " + obsID + " in ObstacleDecorator.cs");
                 break;
         } 
         
