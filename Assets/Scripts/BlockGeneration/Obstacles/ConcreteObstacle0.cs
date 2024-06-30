@@ -16,6 +16,8 @@ public class ConcreteObstacle0 : StandardObstacle
     void Start()
     {
         obstacleID = 0;
+        obsYMin = -3;     // Range of spawn y-values for obstacles
+        obsYMax = 3;
         offset = 0;       // Offset to center Split Obstacle
         spawnX = 20;      // X position of right-hand obstacle spawn
         spawnY = 0;       // Height of obstacle spawn
@@ -26,6 +28,9 @@ public class ConcreteObstacle0 : StandardObstacle
     */
     public override void Spawn()
     {
+        // Get random height
+        int randHeight = (int) Random.Range(obsYMin, obsYMax);
+        spawnY = offset + randHeight;
         Vector3 spawnPos = new Vector3(spawnX, spawnY, 0);
 
         Instantiate(gameObject, spawnPos, Quaternion.identity);
