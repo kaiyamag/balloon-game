@@ -3,40 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-Defines the behavior of a basic Obstacle3 (center obstacle).
+Defines the behavior of a basic Obstacle3 (center obstacle). Inherits from StandardObstacle
 */
-public class ConcreteObstacle3 : BaseObstacle
+public class ConcreteObstacle3 : StandardObstacle
 {
-    /* Array of prefabs for all coin patterns that are compatible with this obstacle type
-    */
-    public GameObject[] validCoinPatternPrefabs;
-    
-    /* Stores percentage chance of generating the corresponding coin pattern
-    */
-    public float[] coinPatternWeights = {50, 50}; 
-
-    /* Numeric ID for this obstacle type
-    */
-    protected int obstacleID = 3;
-    public ObstacleInfo obsInfo;
-
-    private float offset = 4.5f;      // Offset to center Split Obstacle
-    private float spawnX = 20;      // X position of right-hand obstacle spawn
-    private float spawnY = 0;
-    
     /*
-    Initializes/updates ObstacleInfo object for this obstacle based on private properties
+    Initialize obstacle properties from parent class 
     */
-    private void SetObstacleInfo()
+    void Start()
     {
-        if (obsInfo == null) {
-            obsInfo = ScriptableObject.CreateInstance<ObstacleInfo>();
-        }
-        obsInfo.Init(obstacleID, offset, spawnX, spawnY);
+        obstacleID = 3;
+        offset = 4.5f;      // Offset to center Split Obstacle
+        spawnX = 20;      // X position of right-hand obstacle spawn
+        spawnY = 0;
     }
 
     /*
-    Instantiates this gameObject
+    Instantiates this gameObject. Overrides the default Spawn() method from StandardObstacle
     */
     public override void Spawn()
     {
@@ -44,24 +27,5 @@ public class ConcreteObstacle3 : BaseObstacle
         Vector3 spawnPos = new Vector3(spawnX, spawnY, 0);
 
         Instantiate(gameObject, spawnPos, Quaternion.identity);
-    }
-
-    /*
-    Returns a random coin pattern decorator that is compatible with this base obstacle
-    */
-    public override GameObject GetRandomCoinPattern()
-    {
-        int coinIndex = Utils.GetRandWeightedIndex(coinPatternWeights);
-        Debug.Log("Selecting coin pattern index " + coinIndex);
-        return validCoinPatternPrefabs[coinIndex];
-    }
-
-    /*
-    Returns a list of obstacle info
-    */
-    public override ObstacleInfo GetObstacleInfo()
-    {
-        SetObstacleInfo();
-        return obsInfo;
     }
 }
