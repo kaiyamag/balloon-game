@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* Basic concrete decorator class. Decorates a BaseObstacle with a single coin pattern
+/* Basic concrete decorator class. Decorates a BaseBlock with a single coin pattern
 */
 public class LeftPositiveArcCoinDecorator : ObstacleDecorator
 {

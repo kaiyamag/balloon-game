@@ -38,7 +38,7 @@ public class BlockCreator : MonoBehaviour
         GameObject randObstacle = obstaclePrefabs[obstacleIndex];
 
         // Get a constructed block from the given obstacle and coin pattern prefabs
-        BaseObstacle newBlock = blockDriver.ConstructBlock(obstaclePrefabs[obstacleIndex]);
+        BaseBlock newBlock = blockDriver.ConstructBlock(obstaclePrefabs[obstacleIndex]);
         newBlock.Spawn();
     }
 

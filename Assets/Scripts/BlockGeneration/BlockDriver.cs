@@ -6,12 +6,12 @@ using UnityEngine;
 */
 public class BlockDriver : MonoBehaviour
 {
-    /* Returns a BaseObstacle constructed from an obstacle prefab (must implement BaseObstacle)
+    /* Returns a BaseBlock constructed from an obstacle prefab (must implement BaseBlock)
     and a coin pattern prefab (must implement ObstacleDecorator)
     */
-    public BaseObstacle ConstructBlock(GameObject obstaclePrefab)
+    public BaseBlock ConstructBlock(GameObject obstaclePrefab)
     {
-        // Get a reference to class of parent type BaseObstacle
+        // Get a reference to class of parent type BaseBlock
         StandardObstacle baseObstacle = obstaclePrefab.GetComponent<StandardObstacle>();
         if (baseObstacle == null) {
             Debug.LogError("baseObstacle is null **");

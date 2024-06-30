@@ -5,7 +5,7 @@ using UnityEngine;
 /*
 Defines the behavior of a basic Obstacle2 (split obstacle). Inherits from StandardObstacle
 */
-public class ConcreteObstacle2 : /*BaseObstacle*/ StandardObstacle
+public class ConcreteObstacle2 : StandardObstacle
 {
     /*
     Initialize obstacle properties from parent class 

@@ -5,7 +5,7 @@ using UnityEngine;
 /*
 Defines standard properties and behaviour of base obstacles.
 */
-public class StandardObstacle : BaseObstacle
+public class StandardObstacle : BaseBlock
 {
     /* Array of prefabs for all coin patterns that are compatible with this obstacle type
     */

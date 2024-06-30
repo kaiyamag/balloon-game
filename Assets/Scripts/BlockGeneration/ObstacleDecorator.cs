@@ -7,11 +7,11 @@ Abstract parent class for all block decorators (coin patterns). Contains propert
 and methods shared by all coin patterns, and the abstract method SpawnPatternFromPos(Vector3)
 that all child classes must implement
 */
-public abstract class ObstacleDecorator : BaseObstacle
+public abstract class ObstacleDecorator : BaseBlock
 {
     /* A block consisting of one obstacle base and any number of coin pattern decorators
     */
-    protected BaseObstacle baseObstacle;
+    protected BaseBlock baseObstacle;
     protected ObstacleInfo obsInfo;
     protected Vector3 spawnPos;
 
@@ -19,13 +19,13 @@ public abstract class ObstacleDecorator : BaseObstacle
     Replacement constructor for MonoBehaviours. Must be called upon Instantiating
     an ObstacleDecorator. Initializes the base obstacle.
     */
-    public void Init(BaseObstacle obstacle)
+    public void Init(BaseBlock obstacle)
     {
         this.baseObstacle = obstacle;
     }
 
     /*
-    Instantiates the gameObject tied to this BaseObstacle child class and instantiates
+    Instantiates the gameObject tied to this BaseBlock child class and instantiates
     a random compatible coin pattern.
     */
     public override void Spawn()
@@ -87,19 +87,9 @@ public abstract class ObstacleDecorator : BaseObstacle
     */
     public abstract void SpawnPatternFromPos(Vector3 pos);
 
-    /*
-    PLACEHOLDER: This method should not be called from a decorator class, but is
-    necessary to conform to BaseObstacle. Returns this gameObject
-    */
-    // public override GameObject GetRandomCoinPattern() 
-    // {
-    //     Debug.LogError("Inappropriate call of GetRandomCoinPattern from " + gameObject.name);
-    //     return gameObject;
-    // }
-
      /*
     PLACEHOLDER: This method should not be called from a decorator class, but is
-    necessary to conform to BaseObstacle. Returns a list of obstacle info
+    necessary to conform to BaseBlock. Returns a list of obstacle info
     */
     public override ObstacleInfo GetObstacleInfo()
     {
