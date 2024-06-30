@@ -280,5 +280,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   validCoinPatternPrefabs:
+  - {fileID: 743691033785125939, guid: 267e563faad5f504fb6f01ca20b94bd0, type: 3}
   - {fileID: 5503931589506532739, guid: f2091d21bef377b4e80e47ec3ca52130, type: 3}
   obsInfo: {fileID: 0}

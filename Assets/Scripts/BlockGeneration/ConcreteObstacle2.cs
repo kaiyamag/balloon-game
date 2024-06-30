@@ -11,6 +11,10 @@ public class ConcreteObstacle2 : BaseObstacle
     */
     public GameObject[] validCoinPatternPrefabs;
 
+    /* Stores percentage chance of generating the corresponding coin pattern
+    */
+    public float[] coinPatternWeights = {50, 50};   
+
     /* Numeric ID for this obstacle type
     */
     protected int obstacleID = 2;
@@ -52,8 +56,9 @@ public class ConcreteObstacle2 : BaseObstacle
     */
     public override GameObject GetRandomCoinPattern()
     {
-        // STUB
-        return validCoinPatternPrefabs[0];
+        int coinIndex = Utils.GetRandWeightedIndex(coinPatternWeights);
+        Debug.Log("Selecting coin pattern index " + coinIndex);
+        return validCoinPatternPrefabs[coinIndex];
     }
 
      /*
@@ -64,4 +69,5 @@ public class ConcreteObstacle2 : BaseObstacle
         SetObstacleInfo();
         return obsInfo;
     }
+
 }
