@@ -282,4 +282,9 @@ MonoBehaviour:
   validCoinPatternPrefabs:
   - {fileID: 743691033785125939, guid: 267e563faad5f504fb6f01ca20b94bd0, type: 3}
   - {fileID: 5503931589506532739, guid: f2091d21bef377b4e80e47ec3ca52130, type: 3}
+  - {fileID: 4412503856698565706, guid: f5a60c680298ac24daea942e944396ce, type: 3}
+  coinPatternWeights:
+  - 33
+  - 33
+  - 34
   obsInfo: {fileID: 0}

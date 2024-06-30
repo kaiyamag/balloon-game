@@ -10,6 +10,10 @@ public class ConcreteObstacle3 : BaseObstacle
     /* Array of prefabs for all coin patterns that are compatible with this obstacle type
     */
     public GameObject[] validCoinPatternPrefabs;
+    
+    /* Stores percentage chance of generating the corresponding coin pattern
+    */
+    public float[] coinPatternWeights = {50, 50}; 
 
     /* Numeric ID for this obstacle type
     */
@@ -47,7 +51,9 @@ public class ConcreteObstacle3 : BaseObstacle
     */
     public override GameObject GetRandomCoinPattern()
     {
-        return validCoinPatternPrefabs[0];
+        int coinIndex = Utils.GetRandWeightedIndex(coinPatternWeights);
+        Debug.Log("Selecting coin pattern index " + coinIndex);
+        return validCoinPatternPrefabs[coinIndex];
     }
 
     /*

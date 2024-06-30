@@ -4,7 +4,7 @@ using UnityEngine;
 
 /* Basic concrete decorator class. Decorates a BaseObstacle with a single coin pattern
 */
-public class HorizLineCoinDecorator : ObstacleDecorator
+public class LeftPositiveArcCoinDecorator : ObstacleDecorator
 {
     /* A block consisting of one obstacle base and any number of coin pattern decorators
     */
@@ -78,13 +78,15 @@ public class HorizLineCoinDecorator : ObstacleDecorator
         } 
         
         // Decorate existing block by instantiating this coin pattern
-        Debug.Log("Spawn horizontal line starting at " + spawnPos);
-        Vector3 tempPos = spawnPos;
-        tempPos.x += horizCoinOffset;
-        for (int i = 0; i < horizLineCount; i++) {
-            tempPos.x -= coinSpacing;
-            Instantiate(gameObject, tempPos, Quaternion.identity);
-        }
+        Debug.Log("Spawn left positive arc starting at " + spawnPos);
+            Vector3 tempPos = spawnPos;
+            tempPos.x += horizCoinOffset;
+            for (int i = 0; i < horizLineCount; i++) {
+                tempPos.x -= coinSpacing;
+                float steepness = 0.3f;     // Arc steepness
+                tempPos.y = (float) System.Math.Pow(i * steepness, 2) + spawnPos.y;
+                Instantiate(gameObject, tempPos, Quaternion.identity);
+            }
     }
 
     /*
