@@ -11,10 +11,27 @@ public class ConcreteObstacle2 : BaseObstacle
     */
     public GameObject[] validCoinPatternPrefabs;
 
+    /* Numeric ID for this obstacle type
+    */
+    protected int obstacleID = 2;
+    public ObstacleInfo obsInfo;
+
     private float obsYMin = -3;     // Range of spawn y-values for obstacles
     private float obsYMax = 3;
     private float offset = -7;      // Offset to center Split Obstacle
     private float spawnX = 20;      // X position of right-hand obstacle spawn
+    private float spawnY = -7;      // Height of obstacle spawn
+
+    /*
+    Initializes/updates ObstacleInfo object for this obstacle based on private properties
+    */
+    private void SetObstacleInfo()
+    {
+        if (obsInfo == null) {
+            obsInfo = ScriptableObject.CreateInstance<ObstacleInfo>();
+        }
+        obsInfo.Init(obstacleID, offset, spawnX, spawnY);
+    }
 
     /*
     Instantiates this gameObject
@@ -22,10 +39,12 @@ public class ConcreteObstacle2 : BaseObstacle
     public override void Spawn()
     {
         // Get random height
-        float yPos = offset + Random.Range(obsYMin, obsYMax);
-        Vector3 spawnPos = new Vector3(spawnX, yPos, 0);
-        
+        int randHeight = (int) Random.Range(obsYMin, obsYMax);
+        spawnY = offset + randHeight;
+        Vector3 spawnPos = new Vector3(spawnX, spawnY, 0);
+
         Instantiate(gameObject, spawnPos, Quaternion.identity);
+
     }
 
     /*
@@ -33,6 +52,16 @@ public class ConcreteObstacle2 : BaseObstacle
     */
     public override GameObject GetRandomCoinPattern()
     {
+        // STUB
         return validCoinPatternPrefabs[0];
+    }
+
+     /*
+    Returns a list of obstacle info
+    */
+    public override ObstacleInfo GetObstacleInfo()
+    {
+        SetObstacleInfo();
+        return obsInfo;
     }
 }

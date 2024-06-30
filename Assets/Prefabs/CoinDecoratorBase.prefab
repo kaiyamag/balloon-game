@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8760624362888953786}
   - component: {fileID: 6414685041749788273}
   - component: {fileID: 9051118169799685411}
+  - component: {fileID: 301083338925628213}
   m_Layer: 0
   m_Name: CoinDecoratorBase
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 743691033785125939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.68, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -130,5 +131,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f782fdd7ebfff4249b009a10fce60589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &301083338925628213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743691033785125939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f08685092877ef3449da3738eb0fc379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
