@@ -9,7 +9,7 @@ public class BlockDriver : MonoBehaviour
     /* Returns a BaseObstacle constructed from an obstacle prefab (must implement BaseObstacle)
     and a coin pattern prefab (must implement ObstacleDecorator)
     */
-    public BaseObstacle ConstructBlock(GameObject obstaclePrefab, GameObject decoratorPrefab)
+    public BaseObstacle ConstructBlock(GameObject obstaclePrefab)
     {
         // Get a reference to class of parent type BaseObstacle
         BaseObstacle baseObstacle = obstaclePrefab.GetComponent<BaseObstacle>();
@@ -18,7 +18,8 @@ public class BlockDriver : MonoBehaviour
         }
 
         // Decorate the obstacle with a coin pattern
-        SingleCoinDecorator decoratedObstacle = decoratorPrefab.GetComponent<SingleCoinDecorator>();
+        GameObject decPrefab = baseObstacle.GetRandomCoinPattern();
+        ObstacleDecorator decoratedObstacle = decPrefab.GetComponent<ObstacleDecorator>();
 
         if (decoratedObstacle == null) {
             Debug.LogError("decoratedObstacle is null");

@@ -12,11 +12,6 @@ public class BlockCreator : MonoBehaviour
     */
     public GameObject[] obstaclePrefabs; 
 
-    /* Reference to the coin patterns(s) that can decorate a block. Coin Pptterns
-     must have the ObstacleDecorator.cs script.
-    */ 
-    public GameObject[] decoratorPrefabs; 
-
     /* Stores a reference to this object's BlockDriver.cs script
     */
     private BlockDriver blockDriver;
@@ -43,10 +38,8 @@ public class BlockCreator : MonoBehaviour
         GameObject randObstacle = obstaclePrefabs[obstacleIndex];
         GameObject randCoinPattern = randObstacle.GetComponent<BaseObstacle>().GetRandomCoinPattern();
 
-        int decoratorIndex = 0; // PLACEHOLDER
-
         // Get a constructed block from the given obstacle and coin pattern prefabs
-        BaseObstacle newBlock = blockDriver.ConstructBlock(obstaclePrefabs[obstacleIndex], decoratorPrefabs[decoratorIndex]);
+        BaseObstacle newBlock = blockDriver.ConstructBlock(obstaclePrefabs[obstacleIndex]/*, decoratorPrefabs[decoratorIndex]*/);
         newBlock.Spawn();
     }
 
