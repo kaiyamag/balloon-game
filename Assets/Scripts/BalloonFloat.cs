@@ -16,6 +16,7 @@ public class BalloonFloat : MonoBehaviour
     private float xBound = -16;     // Left-hand screen barrier
     private float yBound = -7;      // Lower screen barrier
     private float xStart = -8;      // Default balloon x-position
+    private bool gameOver = false;
 
     void Start()
     {
@@ -37,7 +38,12 @@ public class BalloonFloat : MonoBehaviour
 
         // Check for out-of-bounds conditions
         if (transform.position.x < xBound || transform.position.y < yBound) {
-            GameManager.TriggerOnGameOver();
+            if (!gameOver)
+            {
+                GameManager.TriggerOnGameOver();
+                gameOver = true;
+            }
+            
         }
     }
 }
