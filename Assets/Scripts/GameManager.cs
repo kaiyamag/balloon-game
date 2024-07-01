@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 {
     // ~~~~ ACTIONS ~~~~
     public static event Action OnGameOver;      // Game event triggered when game is over
-    public static event Action<int> OnScoreChange;  
+    //public static event Action<int> OnScoreChange;  
 
     // ~~~~ MENUS ~~~~
     public GameObject gameOverMenu;             // UI element to show on game over
@@ -40,14 +40,14 @@ public class GameManager : MonoBehaviour
     {
         // Subscribe relevant internal & external functions to game events
         OnGameOver += HandleGameOver;
-        OnScoreChange += DisplayScore.HandleOnScoreChange;
+        //OnScoreChange += DisplayScore.HandleOnScoreChange;
     }
 
     void OnDisable() 
     {
         // Unsubscribe relevant internal & external functions to game events
         OnGameOver -= HandleGameOver;
-        OnScoreChange += DisplayScore.HandleOnScoreChange;
+        //OnScoreChange += DisplayScore.HandleOnScoreChange;
     }
 
     /*
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     /*
     Triggers the OnScoreChange event. Can be called by other classes
     */
-    public static void TriggerOnScoreChange(int scoreInc) {
-        OnScoreChange?.Invoke(scoreInc);
-    }
+    // public static void TriggerOnScoreChange(int scoreInc) {
+    //     OnScoreChange?.Invoke(scoreInc);
+    // }
 }

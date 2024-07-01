@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6414685041749788273}
   - component: {fileID: 9051118169799685411}
   - component: {fileID: 301083338925628213}
+  - component: {fileID: 814710996479989426}
   m_Layer: 0
   m_Name: SingleCoinDecoratorBase
   m_TagString: Untagged
@@ -143,5 +144,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f08685092877ef3449da3738eb0fc379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &814710996479989426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743691033785125939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5b476f671dfbd4caa4e55a28b55e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

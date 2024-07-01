@@ -14,7 +14,7 @@ public class DisplayScore : MonoBehaviour
 {
     public GameObject scoreObject;  // Reference to text UI element
     private static TMP_Text text;   // Reference to actual TextMeshPro component
-    private static int score;
+    //private static int score;
    
     void Start()
     {
@@ -22,21 +22,16 @@ public class DisplayScore : MonoBehaviour
         text = scoreObject.GetComponent<TextMeshProUGUI>();
 
         // Initialize score
-        score = 0;
-        text.text = "Score: " + score.ToString();
-    }
-
-    void Update()
-    {
-
+        //score = 0;
+        text.text = "Score: 0"; //+ score.ToString();
     }
 
     /*
     Increments current score by `scoreInc` and displays the result
     */
-    public static void HandleOnScoreChange(int scoreInc)
+    public static void HandleOnScoreChange(ScoreTracker st)
     {
-        score += scoreInc;
-        text.text = "Score: " + score.ToString();
+        //score += scoreInc;
+        text.text = "Score: " + st.score.ToString();
     }
 }
