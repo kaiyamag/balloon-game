@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7867541386766918921}
   - component: {fileID: 4516606096696363950}
   - component: {fileID: 734150317369819376}
+  - component: {fileID: -4186070782516447944}
   m_Layer: 0
   m_Name: HorizLineCoinDecoratorBase
   m_TagString: Untagged
@@ -145,3 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f06eb41db41cef44aaf1c846034234a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4186070782516447944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503931589506532739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5b476f671dfbd4caa4e55a28b55e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1

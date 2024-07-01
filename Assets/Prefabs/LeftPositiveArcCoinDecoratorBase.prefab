@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 199497963791587566}
   - component: {fileID: 8936605601319399086}
   - component: {fileID: 1772734965198004123}
+  - component: {fileID: -3551516905015252273}
   m_Layer: 0
   m_Name: LeftPositiveArcCoinDecoratorBase
   m_TagString: Untagged
@@ -145,3 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c4f6dd3bb897047938a1f04df0025c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3551516905015252273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412503856698565706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5b476f671dfbd4caa4e55a28b55e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1
