@@ -13,7 +13,6 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
     private float boundaryX = -20;     // Left-hand scene boundary
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.position.x < boundaryX) {
