@@ -44,6 +44,9 @@ public class StandardObstacle : BaseBlock
         return validCoinPatternPrefabs[coinIndex];
     }
 
+    /*
+    Returns current ObstacleInfo object attached to this base obstacle
+    */
     public override ObstacleInfo GetObstacleInfo() {
         return obsInfo;
     }
