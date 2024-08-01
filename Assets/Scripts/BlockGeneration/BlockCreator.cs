@@ -39,6 +39,7 @@ public class BlockCreator : MonoBehaviour
     {
         
         int obstacleIndex = Utils.GetRandWeightedIndex(obstacleWeights);  // PLACEHOLDER
+        Debug.Log("** obstacleIndex: " + obstacleIndex);
         GameObject randObstacle = obstaclePrefabs[obstacleIndex];
 
         // Get a constructed block from the given obstacle and coin pattern prefabs
