@@ -24,5 +24,7 @@ public class ObstacleInfo : ScriptableObject
         this.offset = offset;
         this.spawnX = spawnX;
         this.spawnY = spawnY;
+
+        Debug.Log("Updating obstacle info to id = " + id + ", offset = " + offset);
     }
 }
