@@ -79,7 +79,7 @@ public class StandardObstacle : BaseBlock
     // }
 
     public override ObstacleInfo GetObstacleInfo() {
-        Debug.LogWarning("Using parent method :/ Make sure concrete obstacle class implements GetObstacleInfo");
+        //Debug.LogWarning("Using parent method :/ Make sure concrete obstacle class implements GetObstacleInfo");
         return obsInfo;
     }
 
