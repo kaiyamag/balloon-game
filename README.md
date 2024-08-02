@@ -1,7 +1,14 @@
 # balloon-game
 Follow along with me on the dev process for this flappy bird inspired mobile game! Built in Unity 2022.3
 
-## Minimum Viable Product (MVP) Update 1
+
+**What's Up?**
+
+This game is an homage to the era of side-scrolling mobile games like Flappy Bird and Jetpack Joyride, but with a hot-air balloon-themed twist. :balloon: The vision is to produce a simple infinite side-scroller for Android, where the goal is to navigate a hot-air balloon through randomly-generated obstacles and collect as many coins and power-ups as possible. :sparkles:
+
+I'll be building this game from scratch, putting my C#, Unity, and Blender skills to use. Occasional project updates will be posted here!
+
+## :floppy_disk: Minimum Viable Product (MVP) Update 1
 *08/01/2024*
 
 !["A screenshot of a computer game with simple, white obstacles, collectibles, and player"](ref-images/mvp_update_1.png "MVP Update 1")
