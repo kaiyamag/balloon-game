@@ -17,7 +17,7 @@ public class LeftPositiveArcCoinDecorator : ObstacleDecorator
     /*
     Instantiates this coin prefab in this class's pattern from a given starting position
     */
-    public override void SpawnPatternFromPos(Vector3 pos)
+    public override void SpawnPatternFromPos(Vector3 pos, GameObject coin)
     {
         Debug.Log("Spawn left positive arc starting at " + pos);
             Vector3 tempPos = pos;
@@ -26,7 +26,7 @@ public class LeftPositiveArcCoinDecorator : ObstacleDecorator
                 tempPos.x -= coinSpacing;
                 float steepness = 0.3f;     // Arc steepness
                 tempPos.y = (float) System.Math.Pow(i * steepness, 2) + pos.y;
-                Instantiate(gameObject, tempPos, Quaternion.identity);
+                Instantiate(coin, tempPos, Quaternion.identity);
             }
     }
 }

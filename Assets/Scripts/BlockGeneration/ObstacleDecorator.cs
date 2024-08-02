@@ -15,8 +15,15 @@ public abstract class ObstacleDecorator : BaseBlock
     /* A block consisting of one obstacle base and any number of coin pattern decorators
     */
     protected BaseBlock baseObstacle;
+
+    /* The GameObject to spawn as a collectible
+    */
+    public GameObject coin; 
+
+    /* Container for all variables related to obstacle spawn position
+    */
     protected ObstacleInfo obsInfo;
-    protected Vector3 spawnPos;
+    protected Vector3 spawnPos;     // Stores calculated obstacle spawn position in world space
 
     /*
     Replacement constructor for MonoBehaviours. Must be called upon Instantiating
@@ -91,13 +98,13 @@ public abstract class ObstacleDecorator : BaseBlock
         } 
         
         // Decorate existing block by instantiating this coin pattern
-        SpawnPatternFromPos(spawnPos);
+        SpawnPatternFromPos(spawnPos, coin);
     }
 
     /*
     Instantiates this coin prefab in this class's pattern from a given starting position
     */
-    public abstract void SpawnPatternFromPos(Vector3 pos);
+    public abstract void SpawnPatternFromPos(Vector3 pos, GameObject coin);
 
      /*
     PLACEHOLDER: This method should not be called from a decorator class, but is

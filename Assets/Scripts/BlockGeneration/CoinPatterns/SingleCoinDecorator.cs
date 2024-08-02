@@ -13,9 +13,9 @@ public class SingleCoinDecorator : ObstacleDecorator
     /*
     Instantiates this coin prefab in this class's pattern from a given starting position
     */
-    public override void SpawnPatternFromPos(Vector3 pos) 
+    public override void SpawnPatternFromPos(Vector3 pos, GameObject coin) 
     {
         Debug.Log("Spawn single coin starting at " + pos);
-        Instantiate(gameObject, pos, Quaternion.identity);
+        Instantiate(coin, pos, Quaternion.identity);
     }
 }
