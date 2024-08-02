@@ -4,7 +4,7 @@ Follow along with me on the dev process for this flappy bird inspired mobile gam
 
 **What's Up?**
 
-This game is an homage to the era of side-scrolling mobile games like Flappy Bird and Jetpack Joyride, but with a hot-air balloon-themed twist. :balloon: The vision is to produce a simple infinite side-scroller for Android, where the goal is to navigate a hot-air balloon through randomly-generated obstacles and collect as many coins and power-ups as possible. :sparkles:
+This game is an homage to the era of side-scrolling mobile games like Flappy Bird and Jetpack Joyride, but with a hot-air balloon-themed twist :balloon: The vision is to produce a simple infinite side-scroller for Android, where the goal is to navigate a hot-air balloon through randomly-generated obstacles and collect as many coins and power-ups as possible :sparkles:
 
 I'll be building this game from scratch, putting my C#, Unity, and Blender skills to use. Occasional project updates will be posted here!
 
