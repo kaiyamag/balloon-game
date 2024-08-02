@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f06eb41db41cef44aaf1c846034234a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin: {fileID: 3573477721691963465, guid: 63a9288d83717f74f9c8b118b6e4d75c, type: 3}
 --- !u!114 &-4186070782516447944
 MonoBehaviour:
   m_ObjectHideFlags: 0
