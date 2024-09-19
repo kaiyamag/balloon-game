@@ -40,7 +40,7 @@ public class ConcreteObstacle3 : StandardObstacle
 
         // Debug.Log("SpawnX: " + obsInfo.spawnX);
 
-        Instantiate(gameObject, spawnPos, Quaternion.identity);
+        Instantiate(gameObject, spawnPos, transform.rotation);
     }
 
     /*
