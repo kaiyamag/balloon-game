@@ -13,7 +13,8 @@ public class ConcreteObstacle2 : StandardObstacle
     private const int obstacleID = 2;       // Numeric ID for the split obstacle
     private const float obsYMin = -3;       // Range of spawn y-values for obstacles
     private const float obsYMax = 3;
-    private const float offset = -7;        // Offset to center Split Obstacle
+    // TEMP FIX: for new obstacle mesh offset
+    private const float offset = 5 /*-7*/;        // Offset to center Split Obstacle
     private const float spawnX = 20;        // X position of right-hand obstacle spawn
     private  float spawnY = -7;             // Height of obstacle spawn
 
